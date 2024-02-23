@@ -1,0 +1,76 @@
+sort1 uses: bubble sort
+
+How do you know?: Sort1 was the fastest with sorted numbers (best case) which indicates It's bubble sort.
+
+sort2 uses: merge sort
+
+How do you know?: Sort2 was the fastest with random and reversed numbers and run times with sorted numbers was the same as non sorted.
+
+sort3 uses: selection sort
+
+How do you know?: Sort3 run times were the same across all tests I did, So It's Selection Sort.
+
+
+My tests
+# Random numbers first (3 runs for each program)
+random5000.txt
+    sort1 0m0.112s, 0m0.106s, 0m0.077s
+    sort2 0m0.051s, 0m0.038s, 0m0.021s
+    sort3 0m0.048s, 0m0.072s, 0m0.094s
+
+random10000.txt
+    sort1 0m0.364s, 0m0.303s, 0m0.305s
+    sort2 0m0.056s, 0m0.050s, 0m0.067s
+    sort3 0m0.196s, 0m0.200s, 0m0.163s
+
+random50000.txt
+    sort1 0m10.996s, 0m11.418s, 0m11.884s
+    sort2 0m3.540s,  0m3.302s,  0m3.842s
+    sort3 0m6.838s,  0m7.240s,  0m6.748s
+
+# So far, sort2 is the fastest.
+
+# Let's go with reversed numbers (3 runs for each program)
+reversed5000.txt
+    sort1 0m0.089s, 0m0.092s, 0m0.074s
+    sort2 0m0.033s, 0m0.019s, 0m0.046s
+    sort3 0m0.057s, 0m0.072s, 0m0.070s
+
+reversed10000.txt
+    sort1 0m0.270s, 0m0.283s, 0m0.346s
+    sort2 0m0.082s, 0m0.069s, 0m0.069s
+    sort3 0m0.174s, 0m0.201s, 0m0.173s
+
+reversed50000.txt
+    sort1 0m8.426s, 0m8.331s, 0m10.053s
+    sort2 0m3.377s, 0m2.716s, 0m2.751s
+    sort3 0m6.459s, 0m7.902s, 0m5.627s
+
+# So far, also sort2 is the fastest.
+
+let's go with sorted numbers (3 runs for each program)
+sorted5000.txt
+    sort1 0m0.032s, 0m0.046s, 0m0.046s
+    sort2 0m0.032s, 0m0.024s, 0m0.043s
+    sort3 0m0.102s, 0m0.083s, 0m0.070s
+
+sorted10000.txt
+    sort1 0m0.083s, 0m0.088s, 0m0.073s
+    sort2 0m0.064s, 0m0.054s, 0m0.062s
+    sort3 0m0.159s, 0m0.253s, 0m0.223s
+
+sorted50000.txt
+    sort1 0m2.246s, 0m2.279s, 0m2.945s
+    sort2 0m3.070s, 0m3.300s, 0m2.903s
+    sort3 0m7.311s, 0m6.798s, 0m6.114s
+
+# Here Sort1 was a little faster than the others.
+
+# Results
+
+Sort2 was the fastest with random and reversed numbers and run times with sorted numbers was the same as non sorted.
+So, Sort2 is merge sort.
+
+Sort1 was the fastest with sorted numbers (best case) which indicates It's bubble sort.
+
+Sort3 run times were the same across all tests I did, So It's Selection Sort.

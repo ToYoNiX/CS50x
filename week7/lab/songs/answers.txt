@@ -1,0 +1,8 @@
+The answer to the first question:
+Initially, I am planning to adopt a similar approach to Spotify's Wrapped feature, which involves creating a summary of users' listening habits.
+However, instead of representing them using colors, I would consider using names inspired by elements of nature or similar concepts.
+
+The answer to the second question:
+This system may encounter challenges because some Spotify listeners have multiple tastes in music, which can cause collisions in the system (hash talking).
+To prevent these collisions, I propose using more entities or colors to improve the accuracy of personalization.
+Although this approach may require additional storage space, it is considered the optimal solution.
