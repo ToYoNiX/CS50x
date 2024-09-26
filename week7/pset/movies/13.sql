@@ -1,17 +1,5 @@
-SELECT DISTINCT(name) FROM people
-WHERE id IN
-(
-    SELECT person_id FROM stars
-    WHERE movie_id IN
-    (
-        SELECT movies.id FROM people
-        JOIN stars ON stars.person_id = people.id
-        JOIN movies ON stars.movie_id = movies.id
-        WHERE people.name =
-        (
-            SELECT name FROM people
-            WHERE name = 'Kevin Bacon' and birth = 1958
-        )
-    )
-)
-AND name != 'Kevin Bacon';
+SELECT DISTINCT(name) FROM people, stars
+WHERE stars.person_id = people.id AND movie_id IN (
+    SELECT movie_id FROM people, stars
+    WHERE people.id = stars.person_id AND name = 'Kevin Bacon' and birth = 1958
+) AND name != 'Kevin Bacon';

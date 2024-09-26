@@ -1,0 +1,20 @@
+-> Some Tags I used
+<div></div> for a new division or part of the page
+<img> for embeding images
+<meta> for making a responisve web page across devices
+<script></script> to add javascript to the page
+<h1></h1> for a heading
+<button></button> to add a button
+<a></a> for embeding hyperlinks
+<form></form> for making a form for login or signup or any thing actionable.
+<label> to make a label in html
+<input> to add an input in a form
+<link> to add a reference to use like a css file or a url to add more functionality
+
+-> CSS Properties I've used
+text-align -> specifies the place you want the text in (left, center, right)
+color -> specifies the color
+border -> specifies the border thickness and color
+border-top -> specifies the thickness and the color to the top of the border
+width -> specifies the width of an element
+margin -> specifies the space around an element.

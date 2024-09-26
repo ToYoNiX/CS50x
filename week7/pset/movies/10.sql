@@ -1,13 +1,1 @@
-SELECT DISTINCT(name) FROM people
-WHERE id IN
-(
-    SELECT person_id FROM directors
-    WHERE movie_id IN
-    (
-        SELECT id FROM movies
-        WHERE id IN
-        (
-            SELECT movie_id FROM ratings WHERE rating >= 9.0
-        )
-    )
-);
+SELECT name FROM movies, directors, people, ratings WHERE movies.id = directors.movie_id AND directors.person_id = people.id AND ratings.movie_id = movies.id AND ratings.rating >= 9.0;

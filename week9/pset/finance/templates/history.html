@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    C$50 Finance: Portofolio
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="text-start">Symbol</th>
+                <th class="text-end">Shares</th>
+                <th class="text-end">Price</th>
+                <th class="text-end">Transacted</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for action in history %}
+                <tr>
+                    <td class="text-start">{{ action["symbol"] }}</td>
+                    <td class="text-end">{{ action["shares"] }}</td>
+                    <td class="text-end">{{ action["price"] | usd }}</td>
+                    <td class="text-end">{{ action["transacted"] }}</td>
+                </td>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('body').addEventListener('click', function(event) {
+                    let id = event.srcElement.id;
+
+                    let p1 = document.querySelector('#p1');
+                    let p2 = document.querySelector('#p2');
+
+                    if (id) {
+                        if (id == 'choice5') {
+                            document.querySelector('#' + id).style.backgroundColor = 'green';
+                            p1.innerHTML = 'Correct!';
+                        } else if (id == 'choice1' || id == 'choice2' || id == 'choice3' || id == 'choice4') {
+                            document.querySelector('#' + id).style.backgroundColor = 'red';
+                            p1.innerHTML = 'Wrong!';
+                        } else if (id == "checkAns") {
+                            let ans = document.querySelector('#answer');
+
+                            if (ans.value == "United States") {
+                                ans.style.backgroundColor = 'green';
+                                p2.innerHTML = 'Correct!';
+                            } else {
+                                ans.style.backgroundColor = 'red';
+                                p2.innerHTML = 'Wrong!';
+                            }
+                        }
+                    }
+
+                    event.preventDefault();
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <form>
+                    <h3>
+                        What is the approximate ratio of people to sheep in New Zealand?
+                    </h3>
+                    <button id="choice1">6 people per 1 sheep</button>
+                    <button id="choice2">3 people per 1 sheep</button>
+                    <button id="choice3">1 people per 1 sheep</button>
+                    <button id="choice4">1 people per 3 sheep</button>
+                    <button id="choice5">1 people per 6 sheep</button>
+                </form>
+                <p id='p1'></p>
+            </div>
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <form>
+                    <h3>
+                        In which country is it illegal to own one guinea pig, as a lone guinea pig might get lonely?
+                    </h3>
+                    <input type="text" id="answer" autocomplete="off">
+                    <button id="checkAns" type="button">Check Answer</button>
+                    <p id='p2'></p>
+                </form>
+            </div>
+        </div>
+    </body>
+
+</html>

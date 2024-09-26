@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    C$50 Finance: Buy
+{% endblock %}
+
+{% block main %}
+    <form action="/buy" method="post">
+        <div class="mb-3">
+            <input type="text" autofocus autocomplete="off" class="form-control mx-auto w-auto" placeholder="Symbol" name="symbol">
+        </div>
+        <div class="mb-3">
+            <input type="number" autocomplete="off" class="form-control mx-auto w-auto" min="1" step="1" placeholder="Shares" name="shares">
+        </div>
+        <br>
+        <button class="btn btn-primary" type="submit">Buy</button>
+    </form>
+{% endblock %}
